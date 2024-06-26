@@ -9,7 +9,7 @@ body, html {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: rgb(71, 78, 104);
+    background: #161820;
     display: flex;
     justify-content: space-between;
     align-items: center; /* Centers the content vertically */
