@@ -1,0 +1,74 @@
+@import url('reset.css');
+
+:root {
+    --main-color: #b62830;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgb(71, 78, 104);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centers the content vertically */
+    height: 100vh; /* Ensure full viewport height */
+}
+canvas {
+    position: fixed; /* Ensures the canvas covers the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+body *{
+    border: 2px solid black;
+}
+#leftSection{
+    flex: 1; /* Grow to fill available space */
+    display: flex;
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: center; /* Centers content vertically */
+}
+#leftSection img {
+    height: 100%; /* Set image height to 100% of its container (leftSection) */
+    width: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure image behaves like a block element */
+    z-index: 999;
+}
+#rightSection{
+    flex: 1; /* Grow to fill available space */
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    max-width: 100%;
+}
+
+#rightSection #header h1 {
+    text-align: center;
+    font-size: 2.3rem;
+    color: #ce6e7b;
+    text-shadow: 
+    0 0 26px var(--main-color),
+    0 0 30px var(--main-color),
+    0 0 50px var(--main-color),
+    0 0 100px var(--main-color);
+    margin: auto;
+}
+#rightSection #header h1::after {
+    content: '|';
+    font-size: 2.8rem;
+    font-weight: 100;
+    animation: flickerAnimation 800ms linear infinite;
+    animation-delay: 3s; /* Delay before starting the animation */
+}
+
+@keyframes flickerAnimation {
+    0%,15%, 85%, 100% { opacity: 1; } /* Start and end at full opacity */
+    50% { opacity: 0; } /* Middle of animation at no opacity */
+}
+
