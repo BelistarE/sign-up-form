@@ -1,4 +1,6 @@
 @import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 
 :root {
     --main-color: #b62830;
@@ -24,7 +26,7 @@ canvas {
     
 }
 body *{
-    border: 2px solid black;
+    border: 2px solid wheat;
 }
 #leftSection{
     flex: 1; /* Grow to fill available space */
@@ -32,12 +34,45 @@ body *{
     height: 100vh;
     justify-content: flex-start;
     align-items: center; /* Centers content vertically */
+    position: relative;
 }
 #leftSection img {
     height: 100%; /* Set image height to 100% of its container (leftSection) */
     width: auto; /* Maintain aspect ratio */
     display: block; /* Ensure image behaves like a block element */
+    z-index: 998;
+    position: absolute;
+}
+
+.cardBody {
+    position: absolute;
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    background: rgba(140, 127, 149, 0.4);
+    color: white;
+    top: 35rem;
+    text-align: center;
+    font-size: 1.2em;
     z-index: 999;
+  }
+  .logo{
+    opacity: 1;
+    width:100px;
+    height: auto;
+  }
+  .cardHeading{
+    font-size: 45px;
+    font-family: "Chakra Petch";
+    padding: 20px;
+    align-self: flex-end;
+  }
+  .credits{
+    z-index: 999;
+    display: flex;
+
 }
 #rightSection{
     flex: 1; /* Grow to fill available space */

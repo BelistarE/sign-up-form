@@ -17,9 +17,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         draw() {
+            const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius);
+            gradient.addColorStop(0, this.color);
+            gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-            ctx.fillStyle = this.color;
+            ctx.fillStyle = gradient;
             ctx.fill();
         }
 
@@ -44,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const numberOfParticles = 30;
 
     for (let i = 0; i < numberOfParticles; i++) {
-        const radius = Math.random() * 2 + 1; // Random radius between 1 and 4
+        const radius = Math.random() * 2 + 2; // Random radius between 1 and 4
         const x = Math.random() * (canvas.width - 2 * radius) + radius; // Random x-coordinate
         const y = Math.random() * (canvas.height - 2 * radius) + radius; // Random y-coordinate
         const color = 'rgb(255 251 251 / 37%)'; // White color with some transparency
