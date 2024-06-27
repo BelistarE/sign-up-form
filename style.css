@@ -40,6 +40,9 @@ body * {
     max-height: 100vh;
     position: relative; 
     flex-direction: column;
+    z-index: 2;
+    white-space: nowrap;
+    transition: flex-basis 0.5s ease;
 }
 
 .cardBody {
@@ -56,6 +59,7 @@ body * {
     gap: 20px;
     font-family: "Chakra Petch";
     font-size: 50px;
+    padding: 10px;
     text-shadow: 
     0 0 26px var(--main-color),
     0 0 30px var(--main-color),
@@ -66,7 +70,9 @@ body * {
 .logo {
     height: 100px;
 }
-
+.cardHeading{
+    padding: 10px;
+}
 .credits {
     display: flex;
     flex-direction: column;
@@ -74,10 +80,12 @@ body * {
     align-items: center;
     margin-top: auto; /* Push credits to the bottom of the container */
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
+    font-family: "Red hat mono";
+    font-weight: lighter;
 }
 .photo-credits{
     display: flex;
+    
 }
 
 .credits div:nth-child(2){
@@ -90,9 +98,12 @@ body * {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     font-family: Roboto;
     padding: 10%;
+}
+h3{
+    color: white;
 }
 
 #rightSection #header h1 {
@@ -104,7 +115,7 @@ body * {
     0 0 30px var(--main-color),
     0 0 50px var(--main-color),
     0 0 100px var(--main-color);
-    margin: auto;
+    margin: 50px;
 }
 #rightSection #header h1::after {
     content: '|';
@@ -118,4 +129,43 @@ body * {
     0%,15%, 85%, 100% { opacity: 1; } /* Start and end at full opacity */
     50% { opacity: 0; } /* Middle of animation at no opacity */
 }
+/* links */
+a {
+    text-transform: uppercase; /* Makes text uppercase */
+    color: #b42a37; /* Sets the color */
+    text-decoration: none; /* Removes underline */
+    font-weight: bold;
+    font-family: "Red Hat Mono";
+}
 
+a:visited {
+    color: #b42a37; /* Prevents color change after the link is clicked */
+}
+
+a:hover, a:focus {
+    color: #b42a37; /* Keeps color the same on hover and focus */
+}
+
+a:active {
+    color: #b42a37; /* Keeps color the same when the link is being clicked */
+}
+/* form styling */
+form * {
+    outline: 0;
+}
+
+@media (max-width: 768px) {
+    #leftSection {
+        display: none; /* Hide left section on small screens */
+    }
+
+    #rightSection {
+        flex-basis: 100%; /* Take full width on small screens */
+    }
+}
+
+@media (max-width: 768px) {
+    #leftSection {
+        background-position: left center; /* Slide background image to the left */
+    }
+}

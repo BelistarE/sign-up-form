@@ -15,12 +15,12 @@
          </div>
          <div class="credits">
             <div class="photo-credits">
-                <p>Photo by <a href="https://unsplash.com/@icarius_jpeg">@icarius_jpeg</a> on
-                <a href="http://unsplash.com">Unsplash</a> </p>
+                <p>Photo by <a href="https://unsplash.com/@icarius_jpeg" target="_blank">@icarius_jpeg</a> on
+                <a href="http://unsplash.com" target="_blank">Unsplash</a> </p>
             </div>
             <div>
-                <p>Layout inspired by</p>
-                <a href="https://github.com/trandangduat">Tran D. Duat</a>
+                <p>Layout inspired by&nbsp;</p>
+                <a href="https://github.com/trandangduat" target="_blank">Tran D. Duat</a>
             </div>
          </div>
     </div>
@@ -28,8 +28,48 @@
         <div id="header">
             <h1>Your journey begins here...</h1>
         </div>
+        <h3>Sign up for the beta test today</h3>
         <div id="main">
-            <form action="#" method="post"></form>
+            <div id = "main">
+                <form action = "#" method = "post">
+                    <!-- Name section -->
+                    <fieldset>
+                        <div>
+                            <label for = "first-name">First name</label>
+                            <input type = "text" id = "first-name" name = "first-name" placeholder="Bels" required>
+                        </div>
+                        <div>
+                            <label for = "last-name">Last name</label>
+                            <input type = "text" id = "last-name" name = "last-name" placeholder="Estefano" required>
+                        </div>
+                    </fieldset>
+                    <!-- Contact info section -->
+                    <fieldset>
+                        <div>
+                            <label for = "email">Email</label>
+                            <input type = "email" id = "email" name = "email" placeholder="abc1234@xyz.com" required>
+                        </div>
+                        <div>
+                            <label for = "phone-number">Phone number</label>
+                            <input type = "number" id = "phone-number" name = "phone-number" placeholder="(555)-555-5555" required>
+                        </div>
+                    </fieldset>
+                    <!-- Password section -->
+                    <fieldset>
+                        <div>
+                            <label for = "password">Password <i class="fa-solid fa-circle-info"></i></label>
+                            <input type = "password" id = "password" name = "password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required>
+                        </div>
+                        <div>
+                            <label for = "password-confirm">Confirm password <i class="fa-solid fa-xmark"></i></label>
+                            <input type = "password" id = "password-confirm" name = "password-confirm" required>
+                        </div>
+                    </fieldset>
+                    <!-- Sign up button -->
+                    <button type = "submit" id = "submit">Create account</button>
+                    <p style = "display: none;">Already have an account? <a href = "#">Log in</a></p>
+                </form>
+            </div>      
         </div>
     </div>
     <canvas id="particleCanvas"></canvas>
