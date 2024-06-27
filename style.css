@@ -15,7 +15,7 @@ body {
     background: #161820;
 }
 canvas {
-    position: fixed; /* Ensures the canvas covers the entire viewport */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -24,7 +24,7 @@ canvas {
     
 }
 body * {
-    box-sizing: border-box; /* Ensure padding and borders are included in width and height */
+    box-sizing: border-box; 
    /* border: 2px solid wheat; */
 }
 
@@ -46,7 +46,7 @@ body * {
 }
 
 .cardBody {
-    position: absolute; /* Position absolute to fill the container */
+    position: absolute; 
     top: 60%;
     left: 0;
     right: 0;
@@ -78,7 +78,7 @@ body * {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: auto; /* Push credits to the bottom of the container */
+    margin-top: auto; 
     padding: 10px;
     font-family: "Red hat mono";
     font-weight: lighter;
@@ -122,36 +122,66 @@ h3{
     font-size: 2.8rem;
     font-weight: 100;
     animation: flickerAnimation 800ms linear infinite;
-    animation-delay: 3s; /* Delay before starting the animation */
+    animation-delay: 3s; 
 }
 
 @keyframes flickerAnimation {
-    0%,15%, 85%, 100% { opacity: 1; } /* Start and end at full opacity */
-    50% { opacity: 0; } /* Middle of animation at no opacity */
+    0%,15%, 85%, 100% { opacity: 1; } 
+    50% { opacity: 0; } 
 }
 /* links */
 a {
-    text-transform: uppercase; /* Makes text uppercase */
-    color: #b42a37; /* Sets the color */
-    text-decoration: none; /* Removes underline */
+    text-transform: uppercase; 
+    color: #b42a37; 
+    text-decoration: none; 
     font-weight: bold;
     font-family: "Red Hat Mono";
 }
 
 a:visited {
-    color: #b42a37; /* Prevents color change after the link is clicked */
+    color: #b42a37; 
 }
 
 a:hover, a:focus {
-    color: #b42a37; /* Keeps color the same on hover and focus */
+    color: #b42a37; 
 }
 
 a:active {
-    color: #b42a37; /* Keeps color the same when the link is being clicked */
+    color: #b42a37; 
 }
 /* form styling */
 form * {
     outline: 0;
+    font-family: "Red hat mono";
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+label{
+    color: var(--main-color);
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; /
+    width: 100%; 
+}
+fieldset div{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+}
+fieldset{
+    display: flex;
+    border: none;
 }
 
 @media (max-width: 768px) {
