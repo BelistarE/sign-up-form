@@ -14,3 +14,4 @@ function typingEffect (textContainer) {
     setTimeout(update, 100);
 }
 typingEffect(headerTextContainer);
+

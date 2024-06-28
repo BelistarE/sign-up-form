@@ -41,7 +41,6 @@ body * {
     position:relative;
     flex-direction: column;
     z-index: 2;
-    white-space: nowrap;
     transition: flex-basis 0.5s ease;
 }
 
@@ -58,7 +57,7 @@ body * {
     padding: 20px;
     gap: 20px;
     font-family: "Chakra Petch";
-    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-size: 50px;
     padding: 10px;
     text-shadow: 
     0 0 26px var(--main-color),
@@ -102,13 +101,16 @@ body * {
     font-family: Roboto;
     padding: 10%;
     padding-top: 0px;
+    z-index: 5;
 }
 h3{
-    color: white;
+    color: #e098a1;
+    font-family: "Red hat mono";
     margin: 30px;
 }
 #header{
     margin: 50px;
+    width: 100%;
    
 
 }
@@ -116,13 +118,15 @@ h3{
 #rightSection #header h1 {
     text-align: center;
     font-size: 2.3rem;
-    color: #ce6e7b;
+    font-family: "Red hat mono";
+    color: #e098a1;
     text-shadow: 
     0 0 26px var(--main-color),
     0 0 30px var(--main-color),
     0 0 50px var(--main-color),
     0 0 100px var(--main-color);
-    margin: 50px;
+    margin-bottom: 50px;
+    
 }
 #rightSection #header h1::after {
     content: '|';
@@ -217,10 +221,26 @@ input:focus {
     box-shadow: var(--box-shadow-active);
     color: var(--main-color);
 }
-
+button{
+    background-color: var(--main-color);
+    border: none;
+}
 button:hover{
-background-color: var(--main-color);
+background-color: #650409;
 cursor: pointer;
+}
+form fieldset:nth-child(4){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1;
+    width: 100%;
+    padding: 32px;
+    padding-top: 0px;
+}
+    form fieldset:nth-child(4) button {
+    display: inline-flex;
 }
 
 @media (max-width: 768px) {
@@ -239,4 +259,21 @@ cursor: pointer;
     }
 
 
+}
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+fieldset p{
+    margin-top: 20px;
+    color: #e098a1;
+    font-weight: lighter;
 }
